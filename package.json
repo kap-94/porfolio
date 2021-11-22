@@ -5,19 +5,29 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@react-three/drei": "^7.12.5",
+    "@react-three/fiber": "^7.0.7",
     "gatsby": "^3.11.1",
+    "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-gatsby-cloud": "^2.11.0",
     "gatsby-plugin-image": "^1.11.0",
     "gatsby-plugin-manifest": "^3.11.0",
+    "gatsby-plugin-material-ui": "^4.0.3",
     "gatsby-plugin-offline": "^4.11.0",
     "gatsby-plugin-react-helmet": "^4.11.0",
     "gatsby-plugin-sharp": "^3.11.0",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-datocms": "^3.0.6",
     "gatsby-source-filesystem": "^3.11.0",
     "gatsby-transformer-sharp": "^3.11.0",
+    "lerp": "^1.0.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "three": "^0.133.0"
   },
   "devDependencies": {
     "prettier": "2.3.2"
