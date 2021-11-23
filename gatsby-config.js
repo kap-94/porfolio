@@ -8,8 +8,15 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-material-ui`,
     `gatsby-plugin-anchor-links`,
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
