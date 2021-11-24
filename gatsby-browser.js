@@ -8,7 +8,7 @@
 import ReactDOM from "react-dom"
 import RootWrapper from "./src/components/RootWrapper"
 
-export function replaceHydratateFunction() {
+export function replaceHydrateFunction() {
   return (element, container, callback) => {
     ReactDOM.render(element, container, callback)
   }
