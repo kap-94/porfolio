@@ -11,7 +11,7 @@ import ContactSection from "../components/ContactSection/ContactSection"
 import "../components/animations.css"
 
 const useStyles = makeStyles(theme => ({
-  mainContainer: {
+  landingPage: {
     backgroundColor: theme.palette.primary.main,
   },
   sectionContainer: {
@@ -27,7 +27,7 @@ const LandingPage = () => {
   const classes = useStyles()
 
   return (
-    <Grid container direction="column" className={classes.mainContainer}>
+    <Grid container direction="column" className={classes.landingPage}>
       <Grid item id="section-hero" className={classes.heroContainer}>
         <HeroSection />
       </Grid>
