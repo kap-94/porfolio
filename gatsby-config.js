@@ -10,13 +10,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-anchor-links`,
-    {
-      resolve: `gatsby-plugin-material-ui`,
-      options: {
-        disableAutoprefixing: false,
-        disableMinification: false,
-      },
-    },
+    `gatsby-plugin-material-ui`,
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
