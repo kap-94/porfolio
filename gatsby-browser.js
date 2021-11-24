@@ -6,12 +6,12 @@
 
 // You can delete this file if you're not using it
 import ReactDOM from "react-dom"
-
 import RootWrapper from "./src/components/RootWrapper"
-export const wrapRootElement = RootWrapper
 
 export function replaceHydratateFunction() {
   return (element, container, callback) => {
     ReactDOM.render(element, container, callback)
   }
 }
+
+export const wrapRootElement = RootWrapper
