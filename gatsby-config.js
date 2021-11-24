@@ -7,9 +7,16 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-material-ui`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-offline`,
     `gatsby-plugin-anchor-links`,
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        disableAutoprefixing: false,
+        disableMinification: false,
+      },
+    },
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
