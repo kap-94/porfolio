@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
   footer: {
     backgroundColor: theme.palette.primary.main,
     color: "#fff",
-    paddingBottom: "8rem",
+    padding: "8rem 0",
   },
   gridItem: {
     margin: "3rem",
