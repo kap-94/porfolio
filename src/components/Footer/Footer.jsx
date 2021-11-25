@@ -6,14 +6,10 @@ import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 
 const useStyles = makeStyles(theme => ({
-  mainContainer: {},
   footer: {
     backgroundColor: theme.palette.primary.main,
     color: "#fff",
     padding: "8rem 0",
-  },
-  gridItem: {
-    margin: "3rem",
   },
 }))
 

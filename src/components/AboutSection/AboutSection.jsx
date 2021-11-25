@@ -37,11 +37,11 @@ const AboutSection = () => {
             color="initial"
             style={{ marginBottom: "3rem" }}
           >
-            My name is Pablo Karam, i studied business administration in the
-            Faculty of Accounting and Aministration of the UNAM, throught my
+            My name is Pablo Karam, I studied business administration in the
+            Faculty of Accounting and Aministration of the UNAM, throughout my
             studies i develop a strong interest in how organizations could use
-            technological resources for make their business processes more
-            effitient and leverage new business oportunities, so in 2019 i start
+            technological resources to make their business processes more
+            efficient and leverage new business oportunities, so in 2019 i start
             to get into the tech world with a special focus on web development.
           </Typography>
 

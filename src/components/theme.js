@@ -1,17 +1,10 @@
 import { createTheme } from "@material-ui/core/styles"
-// import CssBaseline from "@material-ui/core/CssBaseline"
-
-// const black = "#000"
-// const grey = "#eee"
-// const white = "#fff"
 
 const mainBlue = "#152F40"
-// const secondaryBlue = "#152D3F"
-// const tertiaryBlue = "#122243"
 const blueGreyLight = "#CCD6F5"
 const blueGreyLightSecondary = "#A8B2D0"
 const blueGreyDark = "#8892AF"
-const neoGreen = "#D95032"
+const orangeRed = "#D95032"
 
 const mainFont = "Roboto"
 
@@ -24,7 +17,7 @@ const theme = createTheme({
       main: mainBlue,
     },
     secondary: {
-      main: neoGreen,
+      main: orangeRed,
     },
     background: {
       default: mainBlue,
@@ -62,7 +55,7 @@ const theme = createTheme({
       fontWeight: 600,
     },
     subtitle1: {
-      color: neoGreen,
+      color: orangeRed,
       fontFamily: mainFont,
       fontWeight: 700,
     },

@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography"
 import Hidden from "@material-ui/core/Hidden"
 
 import { DownloadButton } from "../CustomButton/CustomButton"
-import resumePDF from "../../images/about-2.jpeg"
+import resumePDF from "../../images/resume.pdf"
 
 import { useStyles } from "./HeroSection.styles.js"
 
@@ -41,7 +41,7 @@ const HeroSection = () => {
           </Typography>
 
           <Box sx={{ mt: "5rem" }}>
-            <DownloadButton href={resumePDF} downloadTitle="resume.jpeg">
+            <DownloadButton href={resumePDF} downloadTitle="resume.pdf">
               Resume
             </DownloadButton>
           </Box>

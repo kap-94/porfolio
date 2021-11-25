@@ -57,7 +57,7 @@ const Project = ({
               </Typography>
             </Box>
 
-            <Grid container className={classes.projectlinks}>
+            <Grid container className={classes.projectLinks}>
               <Box sx={{ mr: "1.5rem" }}>
                 <a href={`${githublink}`} target="_blank" rel="noreferrer">
                   <GitHub classes={{ root: classes.icon }} />
@@ -71,21 +71,25 @@ const Project = ({
           </Grid>
 
           <Grid sm={12} md={6} item>
-            <GatsbyImage
-              className={`${classes.image} ${classes.imageRight}`}
-              image={image.gatsbyImageData}
-              alt={name}
-            />
+            <a href={projectlink} target="_blank" rel="noreferrer">
+              <GatsbyImage
+                className={`${classes.image} ${classes.imageRight}`}
+                image={image.gatsbyImageData}
+                alt={name}
+              />
+            </a>
           </Grid>
         </React.Fragment>
       ) : (
         <React.Fragment>
           <Grid sm={12} md={6} item>
-            <GatsbyImage
-              image={image.gatsbyImageData}
-              className={`${classes.image} ${classes.imageLeft}`}
-              alt={name}
-            />
+            <a href={projectlink} target="_blank" rel="noreferrer">
+              <GatsbyImage
+                image={image.gatsbyImageData}
+                className={`${classes.image} ${classes.imageLeft}`}
+                alt={name}
+              />
+            </a>
           </Grid>
 
           <Grid
@@ -120,7 +124,7 @@ const Project = ({
             <Grid
               container
               justifyContent="flex-end"
-              className={classes.projectlinks}
+              className={classes.projectLinks}
             >
               <Box sx={{ mr: "1.5rem" }}>
                 <a href={`${githublink}`} target="_blank" rel="noreferrer">

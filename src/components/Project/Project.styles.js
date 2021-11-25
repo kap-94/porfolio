@@ -23,6 +23,7 @@ export const useStyles = makeStyles(theme => ({
 
     "&:hover": {
       transform: "scale(1.025)",
+      zIndex: 10,
     },
 
     [theme.breakpoints.down("sm")]: {
@@ -96,7 +97,7 @@ export const useStyles = makeStyles(theme => ({
     fontSize: "1.65rem",
     padding: "3rem",
     textAlign: "justify",
-    width: "110%",
+    width: "100%",
 
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.6rem",

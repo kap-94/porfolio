@@ -7,8 +7,8 @@ const useStyles = makeStyles(theme => ({
   button: {
     backgroundColor: "transparent",
     border: "none",
-    borderBottom: "1px solid #D95032",
-    color: "#D95032",
+    borderBottom: `1px solid ${theme.palette.secondary.main}`,
+    color: `${theme.palette.secondary.main}`,
     cursor: "pointer",
     display: "inline-block",
     textTransform: "uppercase",
@@ -48,7 +48,7 @@ export const Button = ({ children }) => {
 export const AnchorButton = ({ children, href }) => {
   const classes = useStyles()
   return (
-    <a href={href} className={classes.button}>
+    <a href={href} target="_blank" rel="noreferrer" className={classes.button}>
       {children}
     </a>
   )

@@ -58,7 +58,7 @@ export const useStyles = makeStyles(theme => ({
     transition: "all .5s ease",
 
     "&:hover": {
-      outline: `1rem solid #D95032`,
+      outline: `1rem solid ${theme.palette.secondary.main}`,
       transform: "scale(1.05) translateY(.5rem)",
       zIndex: 10,
     },
