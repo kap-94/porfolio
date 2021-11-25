@@ -33,7 +33,7 @@ const ContactSection = () => {
       </Grid>
 
       <Grid sm item>
-        <AnchorButton href="mailto:karampdwork@gmail.com">Say Hi!</AnchorButton>
+        <AnchorButton href="mailto:karamjpwork@gmail.com">Say Hi!</AnchorButton>
       </Grid>
     </Grid>
   )

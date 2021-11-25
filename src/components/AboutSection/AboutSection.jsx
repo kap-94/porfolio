@@ -55,7 +55,7 @@ const AboutSection = () => {
         </Box>
 
         <Box className={classes.textButton}>
-          <AnchorButton href="mailto:karampdwork@gmail.com">
+          <AnchorButton href="mailto:karamjpwork@gmail.com">
             Send me a message
           </AnchorButton>
         </Box>
