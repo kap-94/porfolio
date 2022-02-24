@@ -1,47 +1,39 @@
 import { makeStyles } from "@material-ui/styles"
-import "../animations.css"
 
 export const useStyles = makeStyles(theme => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
   },
-  toolbar: {},
   tabs: {
     marginLeft: "auto",
-
-    animationName: "moveInRight",
-    animationDuration: "2s",
-    animationFillMode: "ease-in",
   },
   tab: {
-    color: "#B6DBF2",
-    fontSize: "1.5rem",
+    color: theme.palette.common.white,
+    fontSize: "1.65rem",
+    fontWeight: 700,
+    opacity: 0,
     textTransform: "capitalize",
+    transform: "translateY(-1.65rem)",
+
+    [theme.breakpoints.down("sm")]: {
+      opacity: 1,
+    },
   },
   brand: {
-    color: "#B6DBF2",
-    fontSize: "5.5rem",
-    fontWeight: "500",
-    marginRight: "auto",
-    animationName: "clipPathDown",
-    animationDuration: "1s",
-    animationTimingFunction: "ease",
+    fill: theme.palette.common.white,
+    fontSize: "7.5rem",
+    opacity: 0,
 
     [theme.breakpoints.down("sm")]: {
       fontSize: "4.5rem",
     },
-  },
-  button: {
-    borderColor: theme.palette.secondary.main,
-    color: theme.palette.secondary.main,
-    fontSize: "1.4rem",
-    textTransform: "capitalize",
   },
   drawerIconContainer: {
     marginLeft: "auto",
   },
   drawerIcon: {
     fill: theme.palette.secondary.main,
+    fontSize: "3.25rem",
   },
   drawer: {
     backgroundColor: theme.palette.secondary.main,
@@ -49,7 +41,7 @@ export const useStyles = makeStyles(theme => ({
   },
   drawerItem: {
     ...theme.typography.tab,
-    fontSize: "1.625rem",
+    fontSize: "1.55rem",
     color: theme.palette.primary.main,
   },
   anchorLink: {

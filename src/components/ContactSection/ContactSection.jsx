@@ -21,7 +21,7 @@ const ContactSection = () => {
     >
       <Grid sm item>
         <Box className={classes.textContainer} sx={{ mb: "2rem" }}>
-          <Typography className={classes.title} variant="h3" align="center">
+          <Typography className={classes.title} variant="h2" align="center">
             Let's Create Together
           </Typography>
 

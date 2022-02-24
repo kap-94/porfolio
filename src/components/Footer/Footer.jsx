@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
   footer: {
     backgroundColor: theme.palette.primary.main,
     color: "#fff",
-    padding: "8rem 0",
+    padding: "2rem 0",
   },
 }))
 
@@ -17,11 +17,11 @@ const Footer = () => {
   const classes = useStyles()
 
   return (
-    <Grid container justifyContent="center" className={classes.mainContainer}>
+    <Grid container justifyContent="center" className={classes.footer}>
       <Grid item>
         <footer className={classes.footer}>
-          <Typography variant="subtitle1" align="center">
-            Built by Pablo Karam
+          <Typography variant="body1" align="center">
+            Design &amp; Built by Pablo Karam
           </Typography>
         </footer>
       </Grid>

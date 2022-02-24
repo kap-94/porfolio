@@ -1,41 +1,51 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
-import "../animations.css"
-
 const useStyles = makeStyles(theme => ({
   button: {
-    backgroundColor: "transparent",
-    border: "none",
-    borderBottom: `1px solid ${theme.palette.secondary.main}`,
-    color: `${theme.palette.secondary.main}`,
-    cursor: "pointer",
-    display: "inline-block",
-    textTransform: "uppercase",
-    texDecoration: "none",
-    padding: "1.5rem 4rem",
-    position: "relative",
-
-    animationName: "moveInDown",
-    animationDuration: "4s",
-    animationTimingFunction: "ease",
-
-    transition: ".3s all ease",
-
-    "&:link, &:visited": {
+    "&, &:link, &:visited": {
+      backgroundColor: theme.palette.common.white,
+      borderRadius: "10rem",
+      border: "none",
+      color: theme.palette.primary.main,
+      cursor: "pointer",
+      display: "inline-block",
+      fontSize: "1.75rem",
+      padding: "1.5rem 4.5rem",
+      position: "relative",
+      textTransform: "uppercase",
       textDecoration: "none",
-    },
+      transition: "all .2s",
 
-    "&:hover": {
-      backgroundColor: theme.palette.secondary.light,
-      color: "white",
-      boxShadow: "0 1rem 2rem rgba(black, .15)",
-      transform: "translateY(-2px)",
-    },
+      "&:hover": {
+        transform: "translateY(-3px)",
+        boxShadow: `0 1rem 2rem rgba(0, 0, 0, .2)`,
 
-    "&:active": {
-      boxShadow: "0 .5rem 1rem rgba(black, .15)",
-      transform: "translateY(0)",
+        "&::after": {
+          transform: "scaleX(1.4) scaleY(1.6)",
+          opacity: 0,
+        },
+      },
+
+      "&:active, &:focus": {
+        outline: "none",
+        transform: "translateY(-1px)",
+        boxShadow: "0 .5rem 1rem rgba(0, 0, 0,.2)",
+      },
+
+      "&::after": {
+        content: '""',
+        display: "inline-block",
+        backgroundColor: "white",
+        height: "100%",
+        width: "100%",
+        borderRadius: "10rem",
+        position: "absolute",
+        top: 0,
+        left: 0,
+        zIndex: -1,
+        transition: "all .4s",
+      },
     },
   },
 }))

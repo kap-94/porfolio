@@ -1,17 +1,20 @@
-import React from "react"
-
+import React, { useEffect, useRef, Fragment } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
+
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 import Box from "@material-ui/core/Box"
 
 import GitHub from "@material-ui/icons/GitHub"
-import LinkRounded from "@material-ui/icons/LinkRounded"
 
 import { useStyles } from "./Project.styles.js"
 
-const Project = ({
+gsap.registerPlugin(ScrollTrigger)
+
+const Project = function ({
   info: { name },
   info: { description },
   info: { projectlink },
@@ -19,76 +22,114 @@ const Project = ({
   info: { techstack },
   info: { image },
   info: { imageright },
-}) => {
+}) {
   const classes = useStyles()
+  const imageRef = useRef(null)
+
+  useEffect(() => {
+    gsap.to(imageRef.current, {
+      scrollTrigger: {
+        trigger: imageRef.current,
+        toggleActions: "restart pause none pause",
+      },
+      x: 0,
+      opacity: 1,
+      duration: 0.75,
+    })
+  }, [])
 
   return (
     <Grid
       container
-      className={classes.mainContainer}
+      className={`${classes.project} ${
+        imageright ? classes.projectRight : classes.projectLeft
+      }`}
       justifyContent="flex-end"
       alignItems="center"
       direction="row"
+      ref={imageRef}
     >
       {imageright ? (
-        <React.Fragment>
+        <Fragment>
           <Grid
             sm={12}
             md={6}
             item
             className={`${classes.textContainer} ${classes.textContainerLeft}`}
           >
-            <Typography className={classes.subtitle} variant="subtitle1">
-              Featured Project
-            </Typography>
-
-            <Box sx={{ mb: "2rem" }}>
-              <Typography className={classes.title} variant="h5">
-                {name}
-              </Typography>
-            </Box>
-            <Typography className={classes.description} variant="body2">
-              {description}
-            </Typography>
-
-            <Box sx={{ pt: "2rem", pb: "1.5rem" }}>
-              <Typography className={classes.projectTechstack}>
-                {techstack}
-              </Typography>
-            </Box>
-
-            <Grid container className={classes.projectLinks}>
-              <Box sx={{ mr: "1.5rem" }}>
+            <div className={classes.textLeft}>
+              <Grid item container className={classes.githubLeft}>
                 <a href={`${githublink}`} target="_blank" rel="noreferrer">
-                  <GitHub classes={{ root: classes.icon }} />
+                  <GitHub className={classes.icon} />
                 </a>
+                <Typography className={classes.subtitle} variant="subtitle1">
+                  Github
+                </Typography>
+              </Grid>
+
+              <Box sx={{ mb: "2rem" }}>
+                <Grid
+                  container
+                  justifyContent="space-between"
+                  alignItems="center"
+                  className={classes.headerLeft}
+                >
+                  <Typography className={classes.title} variant="h4">
+                    {name}
+                  </Typography>
+
+                  <Grid item>
+                    <a
+                      href={`${projectlink}`}
+                      className={classes.projectLink}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Project &rarr;
+                    </a>
+                  </Grid>
+                </Grid>
               </Box>
 
-              <a href={`${projectlink}`} target="_blank" rel="noreferrer">
-                <LinkRounded classes={{ root: classes.icon }} />
-              </a>
-            </Grid>
+              <Typography className={classes.description} variant="body2">
+                {description}
+              </Typography>
+
+              <Box sx={{ pt: "2rem", pb: "1.5rem" }}>
+                <Typography variant="body2" className={classes.techStack}>
+                  {techstack}
+                </Typography>
+              </Box>
+            </div>
           </Grid>
 
           <Grid sm={12} md={6} item>
             <a href={projectlink} target="_blank" rel="noreferrer">
-              <GatsbyImage
-                className={`${classes.image} ${classes.imageRight}`}
-                image={image.gatsbyImageData}
-                alt={name}
-              />
+              <div
+                className={`${classes.imageContainer} ${classes.imageContainerRight}`}
+              >
+                <GatsbyImage
+                  className={`${classes.image} ${classes.imageRight}`}
+                  image={image.gatsbyImageData}
+                  alt={name}
+                />
+              </div>
             </a>
           </Grid>
-        </React.Fragment>
+        </Fragment>
       ) : (
-        <React.Fragment>
+        <Fragment>
           <Grid sm={12} md={6} item>
             <a href={projectlink} target="_blank" rel="noreferrer">
-              <GatsbyImage
-                image={image.gatsbyImageData}
-                className={`${classes.image} ${classes.imageLeft}`}
-                alt={name}
-              />
+              <div
+                className={`${classes.imageContainer} ${classes.imageContainerLeft}`}
+              >
+                <GatsbyImage
+                  image={image.gatsbyImageData}
+                  className={`${classes.image} ${classes.imageLeft}`}
+                  alt={name}
+                />
+              </div>
             </a>
           </Grid>
 
@@ -98,46 +139,48 @@ const Project = ({
             item
             className={`${classes.textContainer} ${classes.textContainerRight}`}
           >
-            <Typography
-              className={classes.subtitle}
-              variant="subtitle1"
-              sx={{ m: 2 }}
-            >
-              Featured Project
-            </Typography>
-
-            <Box sx={{ mb: "2rem" }}>
-              <Typography className={classes.title} variant="h5">
-                {name}
-              </Typography>
-            </Box>
-            <Typography className={classes.description} variant="body2">
-              {description}
-            </Typography>
-
-            <Box sx={{ pt: "2rem", pb: "1.5rem" }}>
-              <Typography className={classes.projectTechstack}>
-                {techstack}
-              </Typography>
-            </Box>
-
-            <Grid
-              container
-              justifyContent="flex-end"
-              className={classes.projectLinks}
-            >
-              <Box sx={{ mr: "1.5rem" }}>
+            <div className={classes.textRight}>
+              <Grid item container className={classes.githubRight}>
+                <Typography className={classes.subtitle} variant="subtitle1">
+                  Github
+                </Typography>
                 <a href={`${githublink}`} target="_blank" rel="noreferrer">
-                  <GitHub classes={{ root: classes.icon }} />
+                  <GitHub className={classes.icon} />
                 </a>
-              </Box>
+              </Grid>
+              <Box sx={{ mb: "2rem" }}>
+                <Grid
+                  container
+                  justifyContent="space-between"
+                  className={classes.headerRight}
+                  alignItems="center"
+                >
+                  <a
+                    href={`${projectlink}`}
+                    className={classes.projectLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    &larr; Project
+                  </a>
 
-              <a href={`${projectlink}`} target="_blank" rel="noreferrer">
-                <LinkRounded classes={{ root: classes.icon }} />
-              </a>
-            </Grid>
+                  <Typography className={classes.title} variant="h4">
+                    {name}
+                  </Typography>
+                </Grid>
+              </Box>
+              <Typography className={classes.description} variant="body2">
+                {description}
+              </Typography>
+
+              <Box sx={{ pt: "2rem", pb: "1.5rem" }}>
+                <Typography variant="body2" className={classes.techStack}>
+                  {techstack}
+                </Typography>
+              </Box>
+            </div>
           </Grid>
-        </React.Fragment>
+        </Fragment>
       )}
     </Grid>
   )

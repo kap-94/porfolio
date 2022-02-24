@@ -12,14 +12,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-anchor-links`,
     {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        google: {
-          families: ["Roboto:n3,n4,n7,w7"],
-        },
-      },
-    },
-    {
       resolve: `gatsby-source-datocms`,
       options: {
         apiToken: "86c453f65d183cdb3eb6666c027b50",

@@ -1,75 +1,95 @@
 import { createTheme } from "@material-ui/core/styles"
 
-const mainBlue = "#152F40"
-const blueGreyLight = "#CCD6F5"
-const blueGreyLightSecondary = "#A8B2D0"
-const blueGreyDark = "#8892AF"
-const orangeRed = "#D95032"
+const white = "#F4F0F4"
+const purpleBlue = "#3A0FE5"
+const darkBlue = "#190035"
+const golden = "#E6A71C"
 
-const mainFont = "Roboto"
+const mainFont = "Poppins, sans-serif"
 
 const theme = createTheme({
   palette: {
     common: {
-      blue: "#B6D0F2",
+      white: "#F4F0F4",
     },
     primary: {
-      main: mainBlue,
+      main: purpleBlue,
     },
     secondary: {
-      main: orangeRed,
+      main: golden,
     },
     background: {
-      default: mainBlue,
+      default: purpleBlue,
     },
   },
   typography: {
-    htmlFontSize: 10,
+    // htmlFontSize: 10,
     h1: {
-      color: blueGreyLight,
+      color: white,
       fontFamily: mainFont,
-      fontSize: "7rem",
+      fontSize: "6.4rem",
       fontWeight: 600,
+
+      // [`@media screen and (max-width: 1200px)`]: {
+      //   fontSize: "4rem",
+      // },
     },
     h2: {
-      color: blueGreyDark,
-      fontFamily: mainFont,
-      fontSize: "6.35rem",
-      fontWeight: 600,
-    },
-    h3: {
-      color: blueGreyLight,
+      color: darkBlue,
       fontFamily: mainFont,
       fontSize: "4rem",
       fontWeight: 600,
     },
-    h4: {
-      color: blueGreyLight,
+    h3: {
+      color: white,
       fontFamily: mainFont,
-      fontSize: "3rem",
+      fontSize: "2.4rem",
       fontWeight: 600,
+    },
+    h4: {
+      fontSize: "1.7rem",
+      fontWeight: 500,
+      textTransform: "uppercase",
     },
     h5: {
-      color: blueGreyLight,
-      fontFamily: mainFont,
-      fontWeight: 600,
-    },
-    subtitle1: {
-      color: orangeRed,
-      fontFamily: mainFont,
-      fontWeight: 700,
-    },
-    body1: {
-      color: blueGreyDark,
+      color: darkBlue,
       fontFamily: mainFont,
       fontSize: "1.7rem",
-      lineHeight: 2.3,
+      fontWeight: 600,
+      position: "relative",
+      display: "inline-block",
+
+      "&::after": {
+        content: '""',
+        backgroundColor: golden,
+        // backgroundImage: `linear-gradient(to right, ${purpleBlue}, ${golden})`,
+        position: "absolute",
+        bottom: -7,
+        left: 0,
+
+        width: "100%",
+        height: "3px",
+      },
+    },
+    subtitle1: {
+      color: golden,
+      fontFamily: mainFont,
+      fontSize: "1.6rem",
+      fontWeight: 600,
+    },
+    body1: {
+      color: white,
+      fontFamily: mainFont,
+      fontSize: "1.7rem",
+      fontWeight: 500,
+      lineHeight: 1.75,
     },
     body2: {
-      color: blueGreyLightSecondary,
+      color: darkBlue,
       fontFamily: mainFont,
-      fontSize: "1.5rem",
-      lineHeight: 2,
+      fontWeight: 500,
+      lineHeight: 1.75,
+      fontSize: "1.7rem",
     },
   },
   overrides: {
@@ -77,9 +97,19 @@ const theme = createTheme({
       "@global": {
         html: {
           fontSize: "62.5%",
+
+          [`@media screen and (max-width: 1280px)`]: {
+            fontSize: "56.25%",
+          },
+
+          // [`@media screen and (max-width: 900px)`]: {
+          //   fontSize: "50%",
+          // },
         },
         margin: "0px",
         body: {
+          boxSizing: "border-box",
+          fontFamily: "Poppins, sans-serif",
           margin: "0px",
         },
       },
