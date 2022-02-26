@@ -35,6 +35,24 @@ export const useStyles = makeStyles(theme => ({
       fontSize: "4rem",
     },
   },
+  upperTitle: {
+    display: "inline-block",
+    position: "relative",
+    marginBottom: ".5rem",
+    marginLeft: ".5rem",
+  },
+  topLine: {
+    backgroundColor: theme.palette.common.white,
+    marginLeft: ".5rem",
+    marginBottom: "1.5rem",
+    height: "4.25px",
+    width: "7%",
+
+    [theme.breakpoints.down("xs")]: {
+      margin: "2.25rem auto",
+      width: "10%",
+    },
+  },
   body: {
     fontSize: "1.8rem",
     width: "55%",

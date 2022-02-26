@@ -56,20 +56,6 @@ const theme = createTheme({
       fontFamily: mainFont,
       fontSize: "1.7rem",
       fontWeight: 600,
-      position: "relative",
-      display: "inline-block",
-
-      "&::after": {
-        content: '""',
-        backgroundColor: golden,
-        // backgroundImage: `linear-gradient(to right, ${purpleBlue}, ${golden})`,
-        position: "absolute",
-        bottom: -7,
-        left: 0,
-
-        width: "100%",
-        height: "3px",
-      },
     },
     subtitle1: {
       color: golden,

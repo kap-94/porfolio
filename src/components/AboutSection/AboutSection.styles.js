@@ -49,8 +49,8 @@ export const useStyles = makeStyles(theme => ({
     position: "relative",
     width: "100%",
     height: "55rem",
-    boxShadow: `0 24px 125px 0 ${theme.palette.primary.main}`,
-    boxShadow: `3.5px 3.5px 7.5px 0 ${theme.palette.primary.main}`,
+    // boxShadow: `0 24px 125px 0 ${theme.palette.primary.main}`,
+    // boxShadow: `3.5px 3.5px 7.5px 0 ${theme.palette.primary.main}`,
 
     [theme.breakpoints.down("sm")]: {
       height: "35rem",

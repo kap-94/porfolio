@@ -50,12 +50,18 @@ const AboutSection = () => {
           </Box>
 
           <Box sx={{ mb: "3rem" }}>
-            <Box sx={{ mb: "4.5rem" }}>
+            <Box sx={{ mb: "4rem" }}>
               <Typography variant="body2">
-                My name is Pablo Karam, I studied business administration in the
-                National Autonomus University of Mexico
-                <span className={classes.highlightedText}> UNAM</span>,
-                throughout my studies i develop a strong interest in how
+                My name is Pablo Karam, I studied{" "}
+                <span className={classes.highlightedText}>
+                  business administration{" "}
+                </span>
+                in the
+                <span className={classes.highlightedText}>
+                  {" "}
+                  National Autonomus University of Mexico "UNAM"
+                </span>
+                , throughout my studies i develop a strong interest in how
                 organizations could use technological resources to make their
                 business processes more{" "}
                 <span className={classes.highlightedText}> efficient</span> and
@@ -70,8 +76,8 @@ const AboutSection = () => {
                   {" "}
                   web development
                 </span>
-                , but i also have worked in projects related to the business
-                area like{" "}
+                , but i also have worked in projects related to other business
+                areas like{" "}
                 <span className={classes.highlightedText}>
                   {" "}
                   data analytics
@@ -85,20 +91,10 @@ const AboutSection = () => {
                   {" "}
                   algorithmic trading{" "}
                 </span>
-                and ocaccionaly{" "}
+                and
                 <span className={classes.highlightedText}> UI/UX.</span>
               </Typography>
             </Box>
-
-            {/* <Box sx={{ mb: "3rem" }}>
-              <Typography variant="body2">
-                This year i was able to participate in the PAPPIT program, an
-                investigation from the CONACYT in the voice of the peopled who
-                was previously diagnosed with Covid-19, using text-to-speech and
-                text mining techniques we aim to discover pattrons that aloww to
-                contribute to the realization of public policies.
-              </Typography>
-            </Box> */}
 
             <Box sx={{ mb: "1.5rem" }}>
               <Box sx={{ mb: ".5rem" }}>
@@ -118,7 +114,8 @@ const AboutSection = () => {
 
               <Typography variant="body2">
                 React, Gatsby, Material UI, Styled Components, Bootstrap,
-                Express, Mongoose, Django, Scrapy, Scikit Learn, Pandas.
+                Express, Mongoose, Django, Scrapy, Scikit Learn, Pandas,
+                DatoCMS.
               </Typography>
             </Box>
 

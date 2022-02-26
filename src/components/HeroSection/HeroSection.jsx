@@ -17,29 +17,19 @@ const HeroSection = () => {
       <Grid item container className={classes.mainContainer}>
         <Grid item xs={12} lg={12}>
           <div className={classes.textContainer}>
-            {/* <Box sx={{ ml: ".5rem", mb: ".25rem" }}>
-              <Typography
-                variant="subtitle1"
-                className={`${classes.heroItem} hero-text`}
-              >
-                <span>Hi! </span>
-              </Typography>
-            </Box> */}
-
-            <Box sx={{ ml: ".5rem", mb: "1rem" }}>
-              <Typography
-                variant="subtitle1"
-                className={`${classes.heroItem} hero-text`}
-              >
+            <div className={classes.topLine}></div>
+            <Typography
+              variant="subtitle1"
+              className={`${classes.heroItem} ${classes.upperTitle} hero-text`}
+            >
+              {" "}
+              Hi, My Name Is{" "}
+              <span style={{ color: "#F4F0F4", fontSize: "1.85rem" }}>
                 {" "}
-                Hi, My Name Is{" "}
-                <span style={{ color: "#F4F0F4", fontSize: "1.85rem" }}>
-                  {" "}
-                  Pablo Karam
-                </span>{" "}
-                and I'm a
-              </Typography>
-            </Box>
+                Pablo Karam
+              </span>{" "}
+              and I'm a
+            </Typography>
 
             <Typography
               className={`${classes.title} ${classes.heroItem} hero-text`}
@@ -54,9 +44,9 @@ const HeroSection = () => {
               className={`${classes.body} ${classes.heroItem} hero-text`}
               variant="body1"
             >
-              I am a business graduate and software development enthusiast who
-              is confident in the potential of technology to transform and
-              develop any business.
+              I am a passionate about building digital products that helps the
+              client to achive the business goals. I care deeply about user
+              experience. Serious interest for UI design and new technologies.
             </Typography>
 
             <Box
@@ -73,7 +63,6 @@ const HeroSection = () => {
             </Box>
           </div>
         </Grid>
-        {/* <Grid item xs={12} lg={5}></Grid> */}
       </Grid>
     </Grid>
   )
