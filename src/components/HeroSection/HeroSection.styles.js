@@ -47,6 +47,8 @@ export const useStyles = makeStyles(theme => ({
     marginBottom: "1.5rem",
     height: "3.5px",
     width: "5%",
+    opacity: 0,
+    transform: "translateY(3.5rem)",
 
     [theme.breakpoints.down("xs")]: {
       margin: "2.25rem auto",
