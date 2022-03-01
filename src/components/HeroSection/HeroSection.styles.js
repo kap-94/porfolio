@@ -45,8 +45,8 @@ export const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.common.white,
     marginLeft: ".5rem",
     marginBottom: "1.5rem",
-    height: "4.25px",
-    width: "7%",
+    height: "3.5px",
+    width: "5%",
 
     [theme.breakpoints.down("xs")]: {
       margin: "2.25rem auto",

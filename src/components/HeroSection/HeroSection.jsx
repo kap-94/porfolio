@@ -17,7 +17,7 @@ const HeroSection = () => {
       <Grid item container className={classes.mainContainer}>
         <Grid item xs={12} lg={12}>
           <div className={classes.textContainer}>
-            <div className={classes.topLine}></div>
+            <div className={`${classes.topLine} hero-text`}></div>
             <Typography
               variant="subtitle1"
               className={`${classes.heroItem} ${classes.upperTitle} hero-text`}

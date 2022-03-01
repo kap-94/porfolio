@@ -56,6 +56,7 @@ const theme = createTheme({
       fontFamily: mainFont,
       fontSize: "1.7rem",
       fontWeight: 600,
+      textTransform: "uppercase",
     },
     subtitle1: {
       color: golden,
